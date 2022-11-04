@@ -5,14 +5,15 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-const allNotes = require('./db/db.json');
+const db = require('./db/db.json');
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
 app.get('/api/notes', (req, res) => {
-    res.json(allNotes.slice(1));
+    res.json(db.slice(1));
 });
 
 app.get('/', (req, res) => {
@@ -47,7 +48,7 @@ function createNewNote(body, notesArray) {
 }
 
 app.post('/api/notes', (req, res) => {
-    const newNote = createNewNote(req.body, allNotes);
+    const newNote = createNewNote(req.body, db);
     res.json(newNote);
 });
 
@@ -69,7 +70,7 @@ function deleteNote(id, notesArray) {
 }
 
 app.delete('/api/notes/:id', (req, res) => {
-    deleteNote(req.params.id, allNotes);
+    deleteNote(req.params.id, db);
     res.json(true);
 });
 

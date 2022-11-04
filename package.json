@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rhx1138/note-this/issues"
   },
-  "homepage": "https://github.com/rhx1138/note-this#readme"
+  "homepage": "https://github.com/rhx1138/note-this#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
