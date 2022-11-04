@@ -8,7 +8,7 @@ A basic note taking web app for jotting down quick notes
  
 # Link to Walkthrough Video / Website
 
-[App Website](https://website.netlify.app/)
+[App Website](https://note-this.netlify.app/public/index.html)
 
 # Table of Contents
 
